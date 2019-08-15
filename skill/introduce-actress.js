@@ -25,7 +25,10 @@ module.exports = class SkillHandleDeliveryOrder {
                     throw new Error();
                 },
                 reaction: async (error, value, bot, event, context) => {
-                    if (error) return;
+                    if (error) {
+                        return;
+                    }
+                    
 
                     bot.queue({
                         type: "text",
