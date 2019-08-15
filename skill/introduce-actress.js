@@ -12,8 +12,8 @@ module.exports = class SkillHandleDeliveryOrder {
                         type: "buttons",
                         text: "好きな顔のタイプは？",
                         actions: [
-                            {type: "message", label: "松", text: "松"},
-                            {type: "message", label: "竹", text: "竹"},
+                            {type: "message", label: "松", text: "かわいい系"},
+                            {type: "message", label: "竹", text: "きれい系"},
                             {type: "message", label: "梅", text: "梅"}
                         ]
                     }
