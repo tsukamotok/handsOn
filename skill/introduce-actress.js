@@ -18,7 +18,7 @@ module.exports = class SkillHandleDeliveryOrder {
                     }
                 },
                 parser: async (value, bot, event, context) => {
-                    if (["かわいい系", "かわいい系"].includes(value)) {
+                    if (["かわいい系", "きれい系"].includes(value)) {
                         return value;
                     }
 
@@ -26,6 +26,11 @@ module.exports = class SkillHandleDeliveryOrder {
                 },
                 reaction: async (error, value, bot, event, context) => {
                     if (error) {
+                        bot.queue({
+                            type: "text",
+                            text: `かわいい系かきれい系どちらかを選んでね`
+                        });
+                    
                         return;
                     }
                     
