@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@line/bot-sdk": "^6.8.2",
+    "bot-express": "^0.6.27",
     "dialogflow": "^0.10.3",
     "express": "^4.17.1"
   }
