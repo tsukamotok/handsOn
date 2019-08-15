@@ -7,7 +7,7 @@ module.exports = class SkillHandleDeliveryOrder {
             menu: {
                 message_to_confirm: {
                     type: "template",
-                    altText: "出前のメニューは松、竹、梅の3種類になっとりますけどどちらにしましょっ？",
+                    altText: "好きな顔のタイプは？",
                     template: {
                         type: "buttons",
                         text: "好きな顔のタイプは？",
