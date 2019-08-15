@@ -28,7 +28,7 @@ module.exports = class SkillHandleDeliveryOrder {
                     if (error) {
                         bot.queue({
                             type: "text",
-                            text: `かわいい系かきれい系どちらかを選んでね`
+                            text: `【かわいい系】か【きれい系】どちらかを選んでね！`
                         });
                     
                         return;
