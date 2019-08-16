@@ -1,14 +1,7 @@
 "use strict";
 
-var actressName = {
-    0000: "おのののか",
-    0001: "桜井日菜子",
-    0002: "吉岡里穂"
-}
-module.exports = class SkillHandleDeliveryOrder {
-    
 
-    
+module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
         this.required_parameter = {
@@ -166,6 +159,11 @@ module.exports = class SkillHandleDeliveryOrder {
                     });
                 }
             }
+        }
+        var actressName = {
+            0000: "おのののか",
+            0001: "桜井日菜子",
+            0002: "吉岡里穂"
         }
     }
 
