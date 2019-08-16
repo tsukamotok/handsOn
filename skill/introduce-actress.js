@@ -37,7 +37,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `あいよっ！${value}ね。`
+                        text: `${value}いいよな～`
                     });
                 }
             },
@@ -76,7 +76,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `あいよっ！${value}ね。`
+                        text: `${value}ね！わしも好き`
                     });
                 }
             },
@@ -119,13 +119,52 @@ module.exports = class SkillHandleDeliveryOrder {
                     });
                 }
             },
+
+            question4: {
+                message_to_confirm: {
+                    type: "template",
+                    altText: "好きな体型は？",
+                    template: {
+                        type: "buttons",
+                        text: "好きな体型は？",
+                        actions: [
+                            {type: "message", label: "スレンダー", text: "スレンダー"},
+                            {type: "message", label: "ぽっちゃり", text: "ぽっちゃり"},
+                            {type: "message", label: "ノーマル", text: "ノーマル"}
+                        ]
+                    }
+                },
+                parser: async (value, bot, event, context) => {
+                    if (["スレンダー", "ぽっちゃり", "ノーマル"].includes(value)) {
+                        return value;
+                    }
+
+                    throw new Error();
+                },
+                reaction: async (error, value, bot, event, context) => {
+                    if (error) {
+                        bot.queue({
+                            type: "text",
+                            text: `好きな体型を選んでね！`
+                        });
+                    
+                        return;
+                    }
+                    
+
+                    bot.queue({
+                        type: "text",
+                        text: `${value}って惹かれるよね。`
+                    });
+                }
+            }
         }
     }
 
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あいよっ。じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。おおきに。`
+            text: `あなた女優の○○さん好きでしょ？`
         });
     }
 
