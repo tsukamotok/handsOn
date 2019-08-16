@@ -1,6 +1,14 @@
 "use strict";
 
+var actressName = {
+    0000: "おのののか",
+    0001: "桜井日菜子",
+    0002: "吉岡里穂"
+}
 module.exports = class SkillHandleDeliveryOrder {
+    
+
+    
 
     constructor(){
         this.required_parameter = {
@@ -115,7 +123,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `あいよっ！${value}ね。`
+                        text: `${value}ね。目玉焼きはソース派です。`
                     });
                 }
             },
@@ -164,7 +172,7 @@ module.exports = class SkillHandleDeliveryOrder {
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなた女優の○○さん好きでしょ？`
+            text: `あなた女優の${actressName}さん好きでしょ？`
         });
     }
 
