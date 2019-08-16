@@ -1,10 +1,10 @@
 "use strict";
 
-// var actressName = {
-//     0000: "おのののか",
-//     0001: "桜井日菜子",
-//     0002: "吉岡里穂"
-// };
+var actressName = {
+    a: "おのののか",
+    b: "桜井日菜子",
+    c: "吉岡里穂"
+};
 
 
 module.exports = class SkillHandleDeliveryOrder {
@@ -171,8 +171,8 @@ module.exports = class SkillHandleDeliveryOrder {
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなた女優の○○さん好きでしょ？`
-           //text: `あなた女優の${actressName}さん好きでしょ？`
+            //text: `あなた女優の○○さん好きでしょ？`
+           text: `あなた女優の${actressName.a}さん好きでしょ？`
         });
     }
 
