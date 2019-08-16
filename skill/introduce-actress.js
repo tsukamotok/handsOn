@@ -41,21 +41,6 @@ module.exports = class SkillHandleDeliveryOrder {
                     });
                 }
             },
-            address: {
-                message_to_confirm: {
-                    type: "text",
-                    text: "どちらにお届けしましょっ？"
-                },
-                parser: async (value, bot, event, context) => {
-                    if (typeof value == "string"){
-                        return value;
-                    } else if (typeof value == "object" && value.type == "location"){
-                        return value.address;
-                    }
-
-                    throw new Error();
-                }
-            }
         }
     }
 
