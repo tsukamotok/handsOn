@@ -43,4 +43,12 @@ module.exports = class SkillHandleDeliveryOrder {
             },
         }
     }
+
+    async finish(bot, event, context){
+        await bot.reply({
+            type: "text",
+            text: `あいよっ。じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。おおきに。`
+        });
+    }
+
 }
