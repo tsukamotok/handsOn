@@ -89,7 +89,7 @@ module.exports = class SkillHandleDeliveryOrder {
                         type: "buttons",
                         text: "顔の濃さはどう？",
                         actions: [
-                            {type: "message", label: "塩", text: "塩顔"},
+                            {type: "message", label: "塩", text: "塩"},
                             {type: "message", label: "ソース", text: "ソース"},
                             {type: "message", label: "醤油", text: "醤油"}
                         ]
