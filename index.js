@@ -73,3 +73,9 @@ server.use("/bot/webhook", bot_express({
 }));
 
 module.exports = server;
+
+        var actressName = {
+            0000: "おのののか",
+            0001: "桜井日菜子",
+            0002: "吉岡里穂"
+        }

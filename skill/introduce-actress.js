@@ -97,7 +97,7 @@ module.exports = class SkillHandleDeliveryOrder {
                     }
                 },
                 parser: async (value, bot, event, context) => {
-                    if (["塩顔", "ソース", "醤油"].includes(value)) {
+                    if (["塩", "ソース", "醤油"].includes(value)) {
                         return value;
                     }
 
@@ -160,18 +160,13 @@ module.exports = class SkillHandleDeliveryOrder {
                 }
             }
         }
-        // var actressName = {
-        //     0000: "おのののか",
-        //     0001: "桜井日菜子",
-        //     0002: "吉岡里穂"
-        // }
     }
 
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなた女優のさん好きでしょ？`
-           // text: `あなた女優の${actressName}さん好きでしょ？`
+            //text: `あなた女優のさん好きでしょ？`
+           text: `あなた女優の${actressName}さん好きでしょ？`
         });
     }
 
