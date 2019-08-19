@@ -34,7 +34,6 @@ var actressName = {
 module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
-        var value1 = 0;
 
         this.required_parameter = {
             question1: {
@@ -194,10 +193,10 @@ module.exports = class SkillHandleDeliveryOrder {
         }
     }
 
-    async finish(bot, event, context, value1){
+    async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${value1}です`
+            text: `あなたのタイプの女優は${actressName.a0}です`
         });
     }
 
