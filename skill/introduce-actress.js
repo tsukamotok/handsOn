@@ -31,15 +31,9 @@ var actressName = {
 };
 
 
-
 module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
-    var value1 = 0;
-    var value2 = 0;
-    var value3 = 0;
-    var value4 = 0;
-
         this.required_parameter = {
             question1: {
                 message_to_confirm: {
@@ -54,9 +48,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value1, bot, event, context) => {
-                    if (["かわいい系", "きれい系"].includes(value1)) {
-                        return value1;
+                parser: async (value, bot, event, context) => {
+                    if (["かわいい系", "きれい系"].includes(value)) {
+                        return value;
                     }
 
                     throw new Error();
@@ -74,7 +68,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value1}いいよな～`
+                        text: `${value}いいよな～`
                     });
                 }
             },
@@ -93,14 +87,14 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value2, bot, event, context) => {
-                    if (["たれ目", "つり目", "普通目"].includes(value2)) {
-                        return value2;
+                parser: async (value, bot, event, context) => {
+                    if (["たれ目", "つり目", "普通目"].includes(value)) {
+                        return value;
                     }
 
                     throw new Error();
                 },
-                reaction: async (error, value2, bot, event, context) => {
+                reaction: async (error, value, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -113,7 +107,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value2}ね！わしも好き`
+                        text: `${value}ね！わしも好き`
                     });
                 }
             },
@@ -132,14 +126,14 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value3, bot, event, context) => {
-                    if (["塩", "ソース", "醤油"].includes(value3)) {
-                        return value3;
+                parser: async (value, bot, event, context) => {
+                    if (["塩", "ソース", "醤油"].includes(value)) {
+                        return value;
                     }
 
                     throw new Error();
                 },
-                reaction: async (error, value3, bot, event, context) => {
+                reaction: async (error, value, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -152,7 +146,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value3}ね。目玉焼きはソース派です。`
+                        text: `${value}ね。目玉焼きはソース派です。`
                     });
                 }
             },
@@ -171,14 +165,14 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value4, bot, event, context) => {
-                    if (["スレンダー", "ぽっちゃり", "ノーマル"].includes(value4)) {
-                        return value4;
+                parser: async (value, bot, event, context) => {
+                    if (["スレンダー", "ぽっちゃり", "ノーマル"].includes(value)) {
+                        return value;
                     }
 
                     throw new Error();
                 },
-                reaction: async (error, value4, bot, event, context) => {
+                reaction: async (error, value, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -191,7 +185,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value4}って惹かれるよね。`
+                        text: `${value}って惹かれるよね。`
                     });
                 }
             }
