@@ -49,14 +49,14 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value1, bot, event, context) => {
-                    if (["かわいい系", "きれい系"].includes(value1)) {
-                        return value1;
+                parser: async (value, bot, event, context) => {
+                    if (["かわいい系", "きれい系"].includes(value)) {
+                        return value;
                     }
 
                     throw new Error();
                 },
-                reaction: async (error, value1, bot, event, context) => {
+                reaction: async (error, value, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -69,7 +69,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value1}いいよな～`
+                        text: `${value}いいよな～`
                     });
                 }
             },
