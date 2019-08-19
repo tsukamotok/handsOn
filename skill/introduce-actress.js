@@ -194,7 +194,7 @@ module.exports = class SkillHandleDeliveryOrder {
         }
     }
 
-    async finish(bot, event, context){
+    async finish(bot, event, context, value1){
         await bot.reply({
             type: "text",
             text: `あなたのタイプの女優は${value1}です`
