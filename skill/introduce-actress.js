@@ -57,7 +57,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     throw new Error();
                 },
-                reaction: async (error, value, bot, event, context) => {
+                reaction: async (error, value1, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
