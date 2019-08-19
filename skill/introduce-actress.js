@@ -30,10 +30,6 @@ var actressName = {
     i2: "高畑充希さん",
 };
 
-var value1 = 0;
-var value2 = 0;
-var value3 = 0;
-var value4 = 0;
 
 
 module.exports = class SkillHandleDeliveryOrder {
