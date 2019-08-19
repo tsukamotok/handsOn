@@ -34,6 +34,8 @@ var actressName = {
 module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
+        var value1 = 0;
+
         this.required_parameter = {
             question1: {
                 message_to_confirm: {
@@ -48,9 +50,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value, bot, event, context) => {
-                    if (["かわいい系", "きれい系"].includes(value)) {
-                        return value;
+                parser: async (value1, bot, event, context) => {
+                    if (["かわいい系", "きれい系"].includes(value1)) {
+                        return value1;
                     }
 
                     throw new Error();
@@ -68,7 +70,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value}いいよな～`
+                        text: `${value1}いいよな～`
                     });
                 }
             },
