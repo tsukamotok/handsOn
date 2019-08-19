@@ -39,10 +39,10 @@ var value4 = 0;
 module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
-    const value1 = 0;
-    const value2 = 0;
-    const value3 = 0;
-    const value4 = 0;
+    var value1 = 0;
+    var value2 = 0;
+    var value3 = 0;
+    var value4 = 0;
 
         this.required_parameter = {
             question1: {
@@ -104,7 +104,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     throw new Error();
                 },
-                reaction: async (error, value, bot, event, context) => {
+                reaction: async (error, value2, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -143,7 +143,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     throw new Error();
                 },
-                reaction: async (error, value, bot, event, context) => {
+                reaction: async (error, value3, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
@@ -182,7 +182,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     throw new Error();
                 },
-                reaction: async (error, value, bot, event, context) => {
+                reaction: async (error, value4, bot, event, context) => {
                     if (error) {
                         bot.queue({
                             type: "text",
