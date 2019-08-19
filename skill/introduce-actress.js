@@ -1,9 +1,12 @@
 "use strict";
 
 var actressName = {
-    a: "おのののか",
-    b: "桜井日菜子",
-    c: "吉岡里穂"
+    a0: "戸田恵梨香、おのののか",
+    a1: "桜井日菜子",
+    a2: "吉岡里穂、夏帆、清野菜名",
+    b0: "石原さとみ、新川優愛、中条あやみ",
+    b1: "橋本環奈、菊地亜美",
+    b2: "桜長濱ねる、板野友美",
 };
 
 
@@ -171,7 +174,7 @@ module.exports = class SkillHandleDeliveryOrder {
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなた女優の${actressName.a}さん好きでしょ？`
+            text: `あなたのタイプの女優は${actressName.a}さんです`
         });
     }
 
