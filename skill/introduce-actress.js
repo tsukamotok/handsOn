@@ -1,13 +1,39 @@
 "use strict";
 
 var actressName = {
-    a0: "戸田恵梨香、おのののか",
-    a1: "桜井日菜子",
-    a2: "吉岡里穂、夏帆、清野菜名",
-    b0: "石原さとみ、新川優愛、中条あやみ",
-    b1: "橋本環奈、菊地亜美",
-    b2: "桜長濱ねる、板野友美",
+    a0: "戸田恵梨香さん、おのののかさん",
+    a1: "桜井日菜子さん",
+    a2: "吉岡里穂さん、夏帆さん、清野菜名さん",
+    b0: "石原さとみさん、新川優愛さん、中条あやみさん",
+    b1: "橋本環奈さん、菊地亜美さん",
+    b2: "桜長濱ねるさん、板野友美さん",
+    c0: "齋藤飛鳥さん、山本美月さん、スザンヌさん",
+    c1: "大原櫻子さん、水卜麻美さん、篠崎愛さん",
+    c2: "有村架純さん",
+    d0: "足立梨花さん",
+    d1: "富田望生さん",
+    d2: "木南晴夏さん、吉田羊さん",
+    e0: "山本舞香さん",
+    e1: "土屋太鳳さん、松井珠理奈さん",
+    e2: "能年玲奈さん、広瀬すずさん",
+    f0: "西野七瀬さん、波瑠さんさん",
+    f1: "北乃きいさん、野呂佳代さん",
+    f2: "川栄李奈さん",
+    g0: "松岡茉優さん、蒼井優さん",
+    g1: "多部未華子さん",
+    g2: "永野芽衣さん",
+    h0: "深田恭子さん",
+    h1: "中村静香さん、磯山さやかさん",
+    h2: "葵わかなさん、杉崎花さん",
+    i0: "本田翼さん、新垣結衣さん、真野恵里菜さん",
+    i1: "筧美和子さん",
+    i2: "高畑充希さん",
 };
+
+var value1 = 0;
+var value2 = 0;
+var value3 = 0;
+var value4 = 0;
 
 
 module.exports = class SkillHandleDeliveryOrder {
@@ -27,9 +53,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value, bot, event, context) => {
-                    if (["かわいい系", "きれい系"].includes(value)) {
-                        return value;
+                parser: async (value1, bot, event, context) => {
+                    if (["かわいい系", "きれい系"].includes(value1)) {
+                        return value1;
                     }
 
                     throw new Error();
@@ -47,7 +73,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value}いいよな～`
+                        text: `${value1}いいよな～`
                     });
                 }
             },
@@ -66,9 +92,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value, bot, event, context) => {
-                    if (["たれ目", "つり目", "普通目"].includes(value)) {
-                        return value;
+                parser: async (value2, bot, event, context) => {
+                    if (["たれ目", "つり目", "普通目"].includes(value2)) {
+                        return value2;
                     }
 
                     throw new Error();
@@ -86,7 +112,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value}ね！わしも好き`
+                        text: `${value2}ね！わしも好き`
                     });
                 }
             },
@@ -105,9 +131,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value, bot, event, context) => {
-                    if (["塩", "ソース", "醤油"].includes(value)) {
-                        return value;
+                parser: async (value3, bot, event, context) => {
+                    if (["塩", "ソース", "醤油"].includes(value3)) {
+                        return value3;
                     }
 
                     throw new Error();
@@ -125,7 +151,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value}ね。目玉焼きはソース派です。`
+                        text: `${value3}ね。目玉焼きはソース派です。`
                     });
                 }
             },
@@ -144,9 +170,9 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: async (value, bot, event, context) => {
-                    if (["スレンダー", "ぽっちゃり", "ノーマル"].includes(value)) {
-                        return value;
+                parser: async (value4, bot, event, context) => {
+                    if (["スレンダー", "ぽっちゃり", "ノーマル"].includes(value4)) {
+                        return value4;
                     }
 
                     throw new Error();
@@ -164,7 +190,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
                     bot.queue({
                         type: "text",
-                        text: `${value}って惹かれるよね。`
+                        text: `${value4}って惹かれるよね。`
                     });
                 }
             }
@@ -174,7 +200,7 @@ module.exports = class SkillHandleDeliveryOrder {
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${actressName.a0}さんです`
+            text: `あなたのタイプの女優は${actressName.a0}です`
         });
     }
 
