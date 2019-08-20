@@ -92,11 +92,17 @@ module.exports = class SkillHandleDeliveryOrder {
                         return;
                     }
                     
-
-                    bot.queue({
-                        type: "text",
-                        text: `${value}いいよな～`
-                    });
+                    if (value === "かわいい系") {
+                        bot.queue({
+                            type: "text",
+                            text: `わしも${value}すこ`
+                        });
+                    }else if(value === "きれい系"){
+                        bot.queue({
+                            type: "text",
+                            text: `${value}は尊いよな`
+                        });
+                    }
                 }
             },
 
@@ -130,12 +136,17 @@ module.exports = class SkillHandleDeliveryOrder {
                     
                         return;
                     }
-                    
-
-                    bot.queue({
-                        type: "text",
-                        text: `${value}ね！わしも好き`
-                    });
+                    if (value === "たれ目") {
+                        bot.queue({
+                            type: "text",
+                            text: `わしも${value}すこ`
+                        });
+                    }else if(value === "つり目"){
+                        bot.queue({
+                            type: "text",
+                            text: `${value}は尊いよな`
+                        });
+                    }
                 }
             },
 
