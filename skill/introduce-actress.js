@@ -198,9 +198,9 @@ module.exports = class SkillHandleDeliveryOrder {
         var number3 = context.confirmed.question3;
         var number4 = context.confirmed.question4;
 
-        if(number1 === "かわいい"){
+        if(number1 === "かわいい系"){
             number1 = "0";
-        }else{
+        }else　if(number1 === "きれい系"){
             number1 = "1";
         }
 
@@ -232,8 +232,8 @@ module.exports = class SkillHandleDeliveryOrder {
 
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${sum}です`
-            //text: `あなたのタイプの女優は${actressName[sum]}です`
+            //text: `あなたのタイプの女優は${sum}です`
+            text: `あなたのタイプの女優は${actressName[sum]}です`
             //text: `あなたのタイプの女優は${context.confirmed.question1}${actressName[0011]}です`
         });
     }
