@@ -220,11 +220,11 @@ module.exports = class SkillHandleDeliveryOrder {
             number3 = "2";
         }
 
-        if(number4 === "塩"){
+        if(number4 === "スレンダー"){
             number4 = "0";
-        }else if(number3 === "ソース"){
+        }else if(number3 === "ぽっちゃり"){
             number4 = "1";
-        }else　if(number4 === "醤油"){
+        }else　if(number4 === "ノーマル"){
             number4 = "2";
         }
 
