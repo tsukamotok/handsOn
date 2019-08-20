@@ -249,7 +249,7 @@ module.exports = class SkillHandleDeliveryOrder {
 
         if(number4 === "スレンダー"){
             number4 = "0";
-        }else if(number3 === "ぽっちゃり"){
+        }else if(number4 === "ぽっちゃり"){
             number4 = "1";
         }else　if(number4 === "ノーマル"){
             number4 = "2";
