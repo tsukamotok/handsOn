@@ -232,7 +232,8 @@ module.exports = class SkillHandleDeliveryOrder {
 
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${actressName[sum]}です`
+            text: `あなたのタイプの女優は${sum}です`
+            //text: `あなたのタイプの女優は${actressName[sum]}です`
             //text: `あなたのタイプの女優は${context.confirmed.question1}${actressName[0011]}です`
         });
     }
