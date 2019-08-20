@@ -144,7 +144,7 @@ module.exports = class SkillHandleDeliveryOrder {
                     }else if(value === "つり目"){
                         bot.queue({
                             type: "text",
-                            text: `鋭い眼差しで...。`
+                            text: `鋭い眼差しで...おっと。`
                         });
                     }else if(value === "普通目"){
                         bot.queue({
@@ -301,7 +301,7 @@ module.exports = class SkillHandleDeliveryOrder {
         await bot.reply({
             type: "text",
             text: `あなたのタイプの女優は${actressName[sum]}です`
-            //text: `あなたのタイプの女優は${context.confirmed.question1}${actressName[0011]}です`
+
         });
     }
 
