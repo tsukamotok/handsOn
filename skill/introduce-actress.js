@@ -30,7 +30,6 @@ var actressName = {
     i2: "高畑充希さん",
 };
 
-
 module.exports = class SkillHandleDeliveryOrder {
 
     constructor(){
@@ -196,7 +195,7 @@ module.exports = class SkillHandleDeliveryOrder {
     async finish(bot, event, context){
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${actressName.a0}です`
+            text: `あなたのタイプの女優は${context.confirmed.question1}です`
         });
     }
 
