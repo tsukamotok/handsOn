@@ -95,12 +95,12 @@ module.exports = class SkillHandleDeliveryOrder {
                     if (value === "かわいい系") {
                         bot.queue({
                             type: "text",
-                            text: `わしも${value}すこ`
+                            text: `わしも${value}すこ！`
                         });
                     }else if(value === "きれい系"){
                         bot.queue({
                             type: "text",
-                            text: `${value}は尊いよな`
+                            text: `${value}は尊いよな！`
                         });
                     }
                 }
@@ -139,12 +139,17 @@ module.exports = class SkillHandleDeliveryOrder {
                     if (value === "たれ目") {
                         bot.queue({
                             type: "text",
-                            text: `わしも${value}すこ`
+                            text: `${value}は癒される...好き。`
                         });
                     }else if(value === "つり目"){
                         bot.queue({
                             type: "text",
-                            text: `${value}は尊いよな`
+                            text: `鋭い眼差しで...。`
+                        });
+                    }else if(value === "普通目"){
+                        bot.queue({
+                            type: "text",
+                            text: `普通が一番！`
                         });
                     }
                 }
@@ -181,11 +186,24 @@ module.exports = class SkillHandleDeliveryOrder {
                         return;
                     }
                     
+                    if (value === "塩") {
+                        bot.queue({
+                            type: "text",
+                            text: `${value}顔最高！！`
+                        });
+                    }else if(value === "ソース"){
+                        bot.queue({
+                            type: "text",
+                            text: `僕は目玉焼きには${value}派です。`
+                        });
+                    }else if(value === "醤油"){
+                        bot.queue({
+                            type: "text",
+                            text: `${value}は万能`
+                        });
+                    }
 
-                    bot.queue({
-                        type: "text",
-                        text: `${value}ね。目玉焼きはソース派です。`
-                    });
+                    
                 }
             },
 
@@ -220,11 +238,23 @@ module.exports = class SkillHandleDeliveryOrder {
                         return;
                     }
                     
+                    if (value === "スレンダー") {
+                        bot.queue({
+                            type: "text",
+                            text: `${value}...好き。`
+                        });
+                    }else if(value === "ぽっちゃり"){
+                        bot.queue({
+                            type: "text",
+                            text: `${value}顔はぷにぷにしたくなるよね。`
+                        });
+                    }else if(value === "ノーマル"){
+                        bot.queue({
+                            type: "text",
+                            text: `アブ${value}`
+                        });
+                    }
 
-                    bot.queue({
-                        type: "text",
-                        text: `${value}って惹かれるよね。`
-                    });
                 }
             }
         }
