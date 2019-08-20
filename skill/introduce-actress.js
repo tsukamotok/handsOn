@@ -251,7 +251,7 @@ module.exports = class SkillHandleDeliveryOrder {
                     }else if(value === "ノーマル"){
                         bot.queue({
                             type: "text",
-                            text: `アブ${value}`
+                            text: `それはアブ${value}`
                         });
                     }
 
