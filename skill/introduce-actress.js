@@ -1,7 +1,7 @@
 "use strict";
 
 var actressName = {
-    "0011": "戸田恵梨香さん、おのののかさん",
+    "0000": "戸田恵梨香さん、おのののかさん",
     a1: "桜井日菜子さん",
     a2: "吉岡里穂さん、夏帆さん、清野菜名さん",
     b0: "石原さとみさん、新川優愛さん、中条あやみさん",
@@ -193,9 +193,46 @@ module.exports = class SkillHandleDeliveryOrder {
     }
 
     async finish(bot, event, context){
+        var number1 = context.confirmed.question1;
+        var number2 = context.confirmed.question2;
+        var number3 = context.confirmed.question3;
+        var number4 = context.confirmed.question4;
+
+        if(number1 === "かわいい"){
+            number1 = "0";
+        }else{
+            number1 = "1";
+        }
+
+        if(number2 === "たれ目"){
+            number2 = "0";
+        }else if(number2 === "つり目"){
+            number2 = "1";
+        }else　if(number2 === "普通目"){
+            number2 = "2";
+        }
+
+        if(number3 === "塩"){
+            number3 = "0";
+        }else if(number3 === "ソース"){
+            number3 = "1";
+        }else　if(number3 === "醤油"){
+            number3 = "2";
+        }
+
+        if(number4 === "塩"){
+            number4 = "0";
+        }else if(number3 === "ソース"){
+            number4 = "1";
+        }else　if(number4 === "醤油"){
+            number4 = "2";
+        }
+
+       var sum = number1 + number2 + number3 + number4;
+
         await bot.reply({
             type: "text",
-            text: `あなたのタイプの女優は${actressName["0011"]}です`
+            text: `あなたのタイプの女優は${actressName[sum]}です`
             //text: `あなたのタイプの女優は${context.confirmed.question1}${actressName[0011]}です`
         });
     }
